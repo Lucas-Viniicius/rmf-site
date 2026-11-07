@@ -1,0 +1,291 @@
+/* ==========================================================================
+   RMF SOLUÇÕES PREDIAIS - ESTILOS PÁGINA DE SERVIÇOS & CASES
+   ========================================================================== */
+
+/* --- HERO & NAVEGAÇÃO RÁPIDA --- */
+.services-hero {
+  padding: 80px 0 60px;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 105, 0, 0.08) 0%, rgba(8, 8, 8, 1) 70%);
+  text-align: center;
+}
+
+.services-quick-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.quick-nav-item {
+  background-color: var(--bg-card);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.quick-nav-item:hover {
+  background-color: var(--color-orange-primary);
+  color: #ffffff;
+  border-color: var(--color-orange-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 105, 0, 0.3);
+}
+
+/* --- SEÇÃO DE CARDS DE SERVIÇOS --- */
+.services-details-section {
+  padding: 60px 0 100px;
+}
+
+.service-detail-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 90px;
+  background-color: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: border-color var(--transition-normal);
+  scroll-margin-top: 100px; /* Para o link de navegação rápida não ficar sob o header fixo */
+}
+
+.service-detail-card:hover {
+  border-color: var(--color-border);
+}
+
+.service-detail-card.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.service-detail-card.reverse .service-detail-info {
+  order: 2;
+}
+
+.service-detail-card.reverse .service-detail-media {
+  order: 1;
+}
+
+.service-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-orange-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.service-detail-info h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+}
+
+.service-desc {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.service-subsections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.sub-block h4 {
+  font-size: 1rem;
+  color: var(--color-orange-glow);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sub-block ul {
+  list-style: none;
+}
+
+.sub-block ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.sub-block ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-orange-primary);
+}
+
+.highlight-block {
+  background-color: var(--bg-card);
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 3px solid var(--color-orange-primary);
+}
+
+.highlight-block p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.service-detail-media img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* --- SEÇÃO DE CASES DAS EMPRESAS --- */
+.cases-section {
+  padding: 90px 0;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.case-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-orange-primary);
+  box-shadow: 0 10px 25px rgba(255, 105, 0, 0.15);
+}
+
+.case-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.case-client-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+}
+
+.case-location {
+  font-size: 0.75rem;
+  color: var(--color-orange-glow);
+  background-color: rgba(255, 138, 0, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.case-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.case-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.case-tag {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  background-color: var(--bg-card);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- CTA FINAL DA PÁGINA --- */
+.services-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-orange-primary) 0%, #111111 100%);
+  text-align: center;
+}
+
+.services-cta-section h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.services-cta-section p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+  .service-detail-card, 
+  .service-detail-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .service-detail-card.reverse .service-detail-info {
+    order: 1;
+  }
+
+  .service-detail-card.reverse .service-detail-media {
+    order: 2;
+  }
+
+  .service-detail-media img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-detail-card {
+    padding: 20px;
+  }
+  
+  .services-quick-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Engenharia e Manutenção Predial da RMF Soluções Prediais. Confira nossos cases de sucesso e galeria técnica de projetos.">
+  <title>Portfólio & Cases | RMF Soluções Prediais</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo-container" aria-label="RMF Soluções Prediais">
+        <svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-img">
+          <path d="M24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C29.1356 42 33.778 39.8437 37.0657 36.3861" stroke="#FF6900" stroke-width="4" stroke-linecap="round"/>
+          <path d="M24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36" stroke="#FF8A00" stroke-width="3"/>
+          <circle cx="24" cy="24" r="5" fill="#FF8A00"/>
+          <path d="M29 24H50" stroke="#FF8A00" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="50" cy="24" r="3" fill="#FF8A00"/>
+          <path d="M28 17H45" stroke="#FF6900" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="45" cy="17" r="3" fill="#FF6900"/>
+          <path d="M28 31H45" stroke="#FF6900" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="45" cy="31" r="3" fill="#FF6900"/>
+          <rect x="22" y="2" width="4" height="6" rx="1" fill="#FF6900"/>
+          <rect x="22" y="40" width="4" height="6" rx="1" fill="#FF6900"/>
+          <rect x="2" y="22" width="6" height="4" rx="1" fill="#FF6900"/>
+          <text x="65" y="32" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" letter-spacing="1">RMF</text>
+          <text x="125" y="32" font-family="'Inter', sans-serif" font-weight="400" font-size="12" fill="#B8B8B8" letter-spacing="0.5">SOLUÇÕES PREDIAIS</text>
+        </svg>
+      </a>
+
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+          <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfólio</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="contato.html" class="btn btn-primary">Solicite um orçamento</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main style="padding-top: var(--header-height);">
+
+    <!-- HERO DO PORTFÓLIO -->
+    <section class="portfolio-hero">
+      <div class="container reveal">
+        <span class="section-tag">Engenharia em Ação</span>
+        <h1 class="section-title">Catálogo de <span>Projetos & Obras</span></h1>
+        <p class="section-subtitle">
+          Navegue por nosso histórico de intervenções industriais, reformas corporativas e manutenções prediais executadas com excelência.
+        </p>
+
+        <!-- FILTROS AVANÇADOS -->
+        <div class="portfolio-filters" id="portfolioFilters">
+          <button class="filter-btn active" data-filter="all">Todos <span class="filter-count" id="count-all">0</span></button>
+          <button class="filter-btn" data-filter="estruturas">Estruturas Metálicas <span class="filter-count" id="count-estruturas">0</span></button>
+          <button class="filter-btn" data-filter="obras">Obras & Reformas <span class="filter-count" id="count-obras">0</span></button>
+          <button class="filter-btn" data-filter="manutencao">Manutenção & Docas <span class="filter-count" id="count-manutencao">0</span></button>
+          <button class="filter-btn" data-filter="fachadas">Fachadas & Decorativo <span class="filter-count" id="count-fachadas">0</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID DE PROJETOS -->
+    <section class="portfolio-grid-section">
+      <div class="container">
+        
+        <div class="portfolio-grid" id="portfolioGrid">
+
+          <!-- PROJETO 1 -->
+          <article class="portfolio-card reveal" 
+                   data-category="estruturas"
+                   data-title="Galpão Logístico Industrial"
+                   data-client="Grupo Logística Suape"
+                   data-location="Ipojuca, PE"
+                   data-year="2025"
+                   data-metric="4.200m² / 85 Ton. Aço"
+                   data-desc="Fabricação, içamento e montagem completa de cobertura em estrutura metálica espacial para armazenagem de alta capacidade, incluindo fechamento lateral com telhas termoacústicas."
+                   data-solution="Execução acelerada em 45 dias com equipes de montagem operando em turno estendido e rigor nos ensaios não destrutivos de solda."
+                   data-img="assets/projetos/projeto-1.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/suape.png" alt="Galpão Logístico Industrial" loading="lazy">
+              <span class="category-badge">Estruturas Metálicas</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Ipojuca, PE</span>
+                <span>📅 2025</span>
+              </div>
+              <h3 class="card-title">Galpão Logístico Industrial</h3>
+              <p class="card-snippet">Montagem de estrutura metálica pesada para armazenagem e movimentação de carga.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">4.200m² Cobertos</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 2 -->
+          <article class="portfolio-card reveal" 
+                   data-category="obras"
+                   data-title="Retrofit & Fachada em ACM Corporativa"
+                   data-client="Empresarial Boa Viagem"
+                   data-location="Recife, PE"
+                   data-year="2024"
+                   data-metric="1.800m² Revestidos"
+                   data-desc="Revitalização completa da fachada comercial com aplicação de painéis de alumínio composto (ACM) na cor grafite, pele de vidro e retroiluminação cênica de LED."
+                   data-solution="Instalação com alpinismo industrial e balancins elétricos sem a necessidade de interdição da calçada ou recepção dos clientes."
+                   data-img="assets/projetos/projeto-2.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/empresarial-bv.jpg" alt="Retrofit & Fachada Corporativa" loading="lazy">
+              <span class="category-badge">Obras & Reformas</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Recife, PE</span>
+                <span>📅 2024</span>
+              </div>
+              <h3 class="card-title">Retrofit & Fachada em ACM Corporativa</h3>
+              <p class="card-snippet">Modernização estética de prédio comercial com painéis metálicos e pele de vidro.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">1.800m² Fachada</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 3 -->
+          <article class="portfolio-card reveal" 
+                   data-category="manutencao"
+                   data-title="Modernização e Manutenção de Docas"
+                   data-client="Centro de Distribuição Nordeste"
+                   data-location="Cabo de Santo Agostinho, PE"
+                   data-year="2025"
+                   data-metric="24 Niveladoras Mantidas"
+                   data-desc="Recuperação estrutural de fossos de niveladoras, troca de cilindros hidráulicos, substituição de batentes de impacto e pintura técnica de segurança nas 24 docas de expedição."
+                   data-solution="Atendimento programado por docas intercaladas para garantir zero paralisação na carga e descarga do centro logístico."
+                   data-img="assets/projetos/projeto-3.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/nordeste.png" alt="Modernização de Docas Logísticas" loading="lazy">
+              <span class="category-badge">Manutenção & Docas</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Cabo de S. Agostinho, PE</span>
+                <span>📅 2025</span>
+              </div>
+              <h3 class="card-title">Modernização e Manutenção de Docas</h3>
+              <p class="card-snippet">Revisão completa das niveladoras e sinalização reforçada de segurança viária.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">24 Docas Atendidas</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 4 -->
+          <article class="portfolio-card reveal" 
+                   data-category="obras"
+                   data-title="Adequação Interna em Drywall & Elétrica"
+                   data-client="Tech Park Pernambuco"
+                   data-location="Jaboatão dos Guararapes, PE"
+                   data-year="2024"
+                   data-metric="12 Salas Administrativas"
+                   data-desc="Montagem de 650m linear de divisórias em gesso acartonado acústico com miolo de lã de rocha, forro removível mineral e cabeamento estruturado com rede elétrica dedicada."
+                   data-solution="Execução limpa e noturna, entregando o andar pronto para mudança imediata em apenas 18 dias."
+                   data-img="assets/projetos/projeto-4.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/tk.png" alt="Divisórias em Drywall e Elétrica" loading="lazy">
+              <span class="category-badge">Obras & Reformas</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Jaboatão, PE</span>
+                <span>📅 2024</span>
+              </div>
+              <h3 class="card-title">Adequação Interna em Drywall & Elétrica</h3>
+              <p class="card-snippet">Criação de novos ambientes corporativos com isolamento acústico e infraestrutura de rede.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">650m Divisórias</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 5 -->
+          <article class="portfolio-card reveal" 
+                   data-category="fachadas"
+                   data-title="Projeto Luminotécnico & Fachada Festiva"
+                   data-client="Shopping Center Região Metropolitana"
+                   data-location="Olinda, PE"
+                   data-year="2024"
+                   data-metric="+500m Iluminação Cênica"
+                   data-desc="Montagem e fixação de pórticos iluminados, pingentes de iluminação cênica de alto brilho e elementos tridimensionais suspensos na fachada externa do empreendimento."
+                   data-solution="Projeto com rigoroso plano de RIGGING e ancoragens testadas com laudo ART de engenharia mecânica/estrutural."
+                   data-img="assets/projetos/projeto-5.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/shopping.png" alt="Projeto Luminotécnico de Fachada" loading="lazy">
+              <span class="category-badge">Fachadas & Decorativo</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Olinda, PE</span>
+                <span>📅 2024</span>
+              </div>
+              <h3 class="card-title">Projeto Luminotécnico & Fachada Festiva</h3>
+              <p class="card-snippet">Instalação de estruturas em altura e iluminação decorativa para centro comercial.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">Ancoragem em Altura</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO 6 -->
+          <article class="portfolio-card reveal" 
+                   data-category="manutencao"
+                   data-title="Pintura de Piso Epóxi e Sinalização NR-26"
+                   data-client="Planta Industrial Química"
+                   data-location="Igarassu, PE"
+                   data-year="2025"
+                   data-metric="3.500m² Pintura Epóxi"
+                   data-desc="Preparação mecânica de piso industrial com fresamento, estucamento de juntas e aplicação de primer + resina epóxi autonivelante com faixas demarcatórias de pedestres e empilhadeiras."
+                   data-solution="Alta resistência mecânica e química com cura rápida, liberando o tráfego pesado em 48h."
+                   data-img="assets/projetos/projeto-6.jpg">
+            <div class="card-image-wrap">
+              <img src="assets/logo-empresas/industria.png" alt="Pintura de Piso Epóxi Industrial" loading="lazy">
+              <span class="category-badge">Manutenção & Docas</span>
+              <div class="card-quick-actions">
+                <button class="btn-quick-view">Visualizar Detalhes</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span>📍 Igarassu, PE</span>
+                <span>📅 2025</span>
+              </div>
+              <h3 class="card-title">Pintura de Piso Epóxi e Sinalização NR-26</h3>
+              <p class="card-snippet">Revitalização de piso de fábrica com alta durabilidade e sinalização visual de segurança.</p>
+              <div class="card-footer">
+                <span class="metric-highlight">3.500m² Epóxi</span>
+                <span class="view-link">Ver Ficha &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DEDICADA: EMPRESAS E CLIENTES ATENDIDOS -->
+    <section class="clients-showcase-section">
+      <div class="container">
+        <div class="reveal" style="text-align: center; margin-bottom: 50px;">
+          <span class="section-tag">Confiança Corporativa</span>
+          <h2 class="section-title">Empresas que Confiam no <span>Padrão RMF</span></h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Mantemos relacionamentos sólidos com grandes indústrias, operadores logísticos e administradoras imobiliárias do Nordeste.
+          </p>
+        </div>
+
+        <div class="clients-cards-grid">
+          
+          <!-- EMPRESA CARD 1 -->
+          <div class="client-card reveal">
+            <div class="client-badge-logo">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="client-name">Condomínios Logísticos & Galpões</h3>
+            <span class="client-type">Setor Logístico & Transporte</span>
+            <p class="client-summary">
+              Atuação contínua com manutenção preventiva em niveladoras de docas, reparo em portas seccionais, revisão de coberturas metálicas e pintura de pavimentos.
+            </p>
+            <div class="client-stats">
+              <div>
+                <strong>+150</strong>
+                <span>Docas Mantidas</span>
+              </div>
+              <div>
+                <strong>3 Anos</strong>
+                <span>Parceria Contínua</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMPRESA CARD 2 -->
+          <div class="client-card reveal">
+            <div class="client-badge-logo">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><path d="M6 22V12a6 6 0 1 1 12 0v10"/><path d="M18 18H6"/></svg>
+            </div>
+            <h3 class="client-name">Indústrias de Manufatura & Bebidas</h3>
+            <span class="client-type">Setor Industrial & Fabril</span>
+            <p class="client-summary">
+              Projetos de infraestrutura elétrica predial de alta tensão, quadros de comando, construções de mezaninos em tubos estruturais e pisos autonivelantes epóxi.
+            </p>
+            <div class="client-stats">
+              <div>
+                <strong>+12mil m²</strong>
+                <span>Pisos e Mezaninos</span>
+              </div>
+              <div>
+                <strong>100%</strong>
+                <span>Laudos NR-10/35</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMPRESA CARD 3 -->
+          <div class="client-card reveal">
+            <div class="client-badge-logo">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><path d="M3 21h18M3 10h18M3 6h18M3 15h18"/></svg>
+            </div>
+            <h3 class="client-name">Shopping Centers & Empresariais</h3>
+            <span class="client-type">Varejo & Empreendimentos Imobiliários</span>
+            <p class="client-summary">
+              Serviços de adequação de salas em drywall, montagens de fachadas comerciais em ACM, reformas prediais gerais e instalações cênicas/decorativas em altura.
+            </p>
+            <div class="client-stats">
+              <div>
+                <strong>+40</strong>
+                <span>Salas & Lojas Reformadas</span>
+              </div>
+              <div>
+                <strong>Zero</strong>
+                <span>Interrupções Operacionais</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE COMPROMISSO E GARANTIA -->
+    <section class="guarantee-bar">
+      <div class="container reveal">
+        <div class="guarantee-flex">
+          <div class="g-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+              <h4>Segurança Técnica Rigorosa</h4>
+              <p>Equipes com certificações completas NR-10 (Elétrica) e NR-35 (Trabalho em Altura).</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <h4>Compromisso com Prazos</h4>
+              <p>Cronogramas físico-financeiros cumpridos com precisão e acompanhamento diário.</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF6900" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <h4>Responsabilidade Técnica (ART)</h4>
+              <p>Projetos acompanhados por engenheiros e emissão de Anotação de Responsabilidade Técnica.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <section class="portfolio-cta">
+      <div class="container reveal">
+        <h2>Seu próximo projeto em boas mãos.</h2>
+        <p>Converse com nosso time de engenharia para um orçamento detalhado e visita técnica.</p>
+        <a href="contato.html" class="btn btn-primary" style="background: #080808; border-color: #080808;">
+          Solicitar orçamento de projeto
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE DETALHES DO PROJETO (TELA CHEIA) -->
+  <div class="portfolio-modal" id="portfolioModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Fechar Modal">&times;</button>
+      
+      <div class="modal-grid">
+        <div class="modal-media-side">
+          <img id="modalImg" src="" alt="Projeto RMF">
+          <span class="modal-badge-cat" id="modalBadgeCat">Categoria</span>
+        </div>
+
+        <div class="modal-info-side">
+          <h2 id="modalTitle">Nome do Projeto</h2>
+          
+          <div class="modal-spec-grid">
+            <div class="spec-box">
+              <small>Cliente</small>
+              <strong id="modalClient">Empresa X</strong>
+            </div>
+            <div class="spec-box">
+              <small>Localização</small>
+              <strong id="modalLocation">Recife, PE</strong>
+            </div>
+            <div class="spec-box">
+              <small>Ano</small>
+              <strong id="modalYear">2025</strong>
+            </div>
+            <div class="spec-box">
+              <small>Métrica / Escala</small>
+              <strong id="modalMetric">000 m²</strong>
+            </div>
+          </div>
+
+          <div class="modal-text-block">
+            <h3>Escopo da Obra</h3>
+            <p id="modalDesc">Descrição detalhada do escopo técnico do projeto executado.</p>
+          </div>
+
+          <div class="modal-text-block highlight-text-block">
+            <h3>Desafio & Solução RMF</h3>
+            <p id="modalSolution">Solução estratégica adotada pela RMF Soluções Prediais.</p>
+          </div>
+
+          <a href="#" id="modalWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-modal-wa">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-0.981z"/></svg>
+            Solicitar Projeto Similar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ DA PÁGINA -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-container">
+            <svg width="180" height="40" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C29.1356 42 33.778 39.8437 37.0657 36.3861" stroke="#FF6900" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="24" cy="24" r="5" fill="#FF8A00"/>
+              <path d="M29 24H50" stroke="#FF8A00" stroke-width="3" stroke-linecap="round"/>
+              <text x="65" y="32" font-family="'Inter', sans-serif" font-weight="900" font-size="22" fill="#FFFFFF">RMF</text>
+            </svg>
+          </a>
+          <p>Soluções completas em obras, reformas e manutenção predial corporativa com excelência técnica.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="servicos.html#serralharia">Serralharia</a></li>
+            <li><a href="servicos.html#eletrica">Elétrica</a></li>
+            <li><a href="servicos.html#obras">Obras e Reformas</a></li>
+            <li><a href="servicos.html#docas">Manutenção de Docas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contato</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (81) 99425-1337
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              contato@rmfsolucoesprediais.com
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Jaboatão dos Guararapes, PE
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 RMF Soluções Prediais. Todos os direitos reservados.</p>
+        <p>Slogan: <em>Construindo soluções, entregando resultados.</em></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÕES FLUTUANTES -->
+  <div class="floating-actions">
+    <a href="https://wa.me/5581994251337" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Contato via WhatsApp">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-0.981z"/></svg>
+    </a>
+    <button class="floating-btn btn-back-to-top" id="backToTop" aria-label="Voltar ao topo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
