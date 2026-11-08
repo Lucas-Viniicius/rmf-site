@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080e18">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RMF Soluções Prediais">
   <meta name="description" content="Entre em contato com a RMF Soluções Prediais. Solicite orçamentos para obras, reformas, estruturas metálicas e manutenção predial corporativa.">
   <title>Contato & Orçamentos | RMF Soluções Prediais</title>
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contato.css">
+  <link rel="stylesheet" href="css/upgrade.css">
+  <link rel="stylesheet" href="css/rmf-premium.css">
 </head>
 <body>
 
@@ -50,7 +55,7 @@
         <a href="contato.html" class="btn btn-primary">Solicite um orçamento</a>
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -135,7 +140,7 @@
                 <span class="f-num">01</span>
                 <div>
                   <h4>Direcionamento Inteligente</h4>
-                  <p>Mensagem formatada com todos os parâmetros do projeto.</p>
+                  <p>Envio por e-mail ou abertura de conversa no WhatsApp com os dados preenchidos.</p>
                 </div>
               </div>
               <div class="f-item">
@@ -164,12 +169,12 @@
             </div>
 
             <!-- Seletor do Meio de Envio -->
-            <div class="send-method-tabs">
-              <button class="method-tab active" data-method="whatsapp">
+            <div class="send-method-tabs" role="group" aria-label="Escolha como entrar em contato">
+              <button class="method-tab active" data-method="whatsapp" type="button" aria-pressed="true">
                 <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-0.999 3.648 3.742-0.981z"/></svg>
                 Enviar via WhatsApp
               </button>
-              <button class="method-tab" data-method="email">
+              <button class="method-tab" data-method="email" type="button" aria-pressed="false">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 Simular Envio por E-mail
               </button>
@@ -245,12 +250,13 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-submit-form" id="submitBtn">
-                <span id="submitBtnText">Enviar Solicitação via WhatsApp</span>
+                <span id="submitBtnText">Preparar mensagem no WhatsApp</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
 
               <!-- MENSAGEM DE FEEDBACK -->
-              <div class="form-feedback" id="formFeedback"></div>
+              <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+              <p class="delivery-note">O WhatsApp exige sua confirmação para enviar. O site não envia mensagens automaticamente sem uma integração oficial com servidor.</p>
             </form>
           </div>
 
@@ -378,7 +384,7 @@
         <p>Slogan: <em>Construindo soluções, entregando resultados.</em></p>
       </div>
     </div>
-  </footer>
+  <div style="text-align:center;padding:8px 16px;background:#080e17"><a href="privacidade.html" style="color:#b7c3cf;font-size:12px">Privacidade e proteção de dados</a></div></footer>
 
   <!-- BOTÕES FLUTUANTES -->
   <div class="floating-actions">
@@ -392,5 +398,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/contato.js"></script>
+  <script src="js/upgrade.js" defer></script>
+<script src="js/scrollytelling.js" defer></script>
 </body>
 </html>

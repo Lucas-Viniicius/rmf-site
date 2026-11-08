@@ -20,7 +20,7 @@ function initCopyEmail() {
 
   copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(emailText.textContent.trim()).then(() => {
-      copyBtnLabel.textContent = 'Copiat com sucesso! ✓';
+      copyBtnLabel.textContent = 'Copiado com sucesso! ✓';
       copyBtn.style.borderColor = '#25D366';
       copyBtn.style.color = '#25D366';
 
@@ -36,17 +36,11 @@ function initCopyEmail() {
 /* --- ALTERNADOR DE MÉTODOS DE ENVIO (WHATSAPP vs E-MAIL) --- */
 function initSendMethodTabs() {
   const tabs = document.querySelectorAll('.method-tab');
-  const submitBtnText = document.getElementById('submitBtnText');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      // O formulário sempre entrega a solicitação no WhatsApp comercial.
-      submitBtnText.textContent = 'Enviar Solicitação via WhatsApp';
-    });
-  });
+  const label = document.getElementById('submitBtnText');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => { t.classList.toggle('active', t === tab); t.setAttribute('aria-pressed', String(t === tab)); });
+    if (label) label.textContent = tab.dataset.method === 'email' ? 'Preparar e-mail de orçamento' : 'Preparar mensagem no WhatsApp';
+  }));
 }
 
 /* --- BARRA DE PROGRESSO DE PREENCHIMENTO DO FORMULÁRIO --- */
@@ -108,20 +102,20 @@ function initContactForm() {
 📝 *Descrição da Necessidade:*
 ${mensagem}`;
 
-      const numeroWhatsApp = '5581994251337';
-      const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoWhatsApp)}`;
-
-      feedback.className = 'form-feedback success';
-      feedback.textContent = 'Abrindo o WhatsApp da RMF com sua solicitação preenchida...';
-
-      // Abrir imediatamente durante o clique do usuário evita o bloqueio de pop-ups
-      // causado por window.open dentro de setTimeout.
-      const whatsappWindow = window.open(url, '_blank');
-
-      // Se o navegador bloquear a nova aba, redireciona a própria página.
-      if (!whatsappWindow) {
-        window.location.href = url;
+      const method = document.querySelector('.method-tab.active')?.dataset.method || 'whatsapp';
+      if (method === 'email') {
+        const assunto = encodeURIComponent('Solicitação de orçamento — RMF Soluções Prediais');
+        const body = encodeURIComponent(textoWhatsApp.replace(/\*/g, ''));
+        feedback.className = 'form-feedback success';
+        feedback.textContent = 'Abrindo seu aplicativo de e-mail. Confirme o envio nele.';
+        window.location.href = `mailto:contato@rmfsolucoesprediais.com?subject=${assunto}&body=${body}`;
+        return;
       }
+      const url = `https://wa.me/5581994251337?text=${encodeURIComponent(textoWhatsApp)}`;
+      feedback.className = 'form-feedback success';
+      feedback.innerHTML = 'Mensagem preparada. <strong>Confirme o envio no WhatsApp.</strong> <a target="_blank" rel="noopener noreferrer" href="' + url + '">Abrir novamente</a>';
+      const opened = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!opened) feedback.textContent = 'Mensagem pronta. Use o link do WhatsApp acima para abrir e confirmar o envio.';
   });
 }
 

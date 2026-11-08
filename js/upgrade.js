@@ -1,0 +1,6 @@
+document.addEventListener('DOMContentLoaded',()=>{
+ const menu=document.getElementById('hamburger'),nav=document.getElementById('navMenu');
+ if(menu&&nav){const sync=()=>{const active=nav.classList.contains('active');menu.setAttribute('aria-expanded',String(active));menu.setAttribute('aria-label',active?'Fechar menu':'Abrir menu');};menu.addEventListener('click',()=>setTimeout(sync,0));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setTimeout(sync,0)));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('active')){nav.classList.remove('active');menu.classList.remove('active');document.body.style.overflow='';sync();menu.focus();}});}
+ document.querySelectorAll('img:not([loading])').forEach((img,i)=>{if(i>1)img.loading='lazy';img.decoding='async';});
+ document.querySelectorAll('.faq-question').forEach(btn=>{btn.setAttribute('aria-expanded',String(btn.closest('.faq-item')?.classList.contains('active')));btn.addEventListener('click',()=>requestAnimationFrame(()=>document.querySelectorAll('.faq-question').forEach(b=>b.setAttribute('aria-expanded',String(b.closest('.faq-item')?.classList.contains('active'))))));});
+});

@@ -1,0 +1,31 @@
+{
+  "parceiros": [
+    {
+      "nome": "Suape",
+      "segmento": "Indústria",
+      "descricao": "Empresa parceira da RMF Soluções Prediais.",
+      "logo": "assets/logo-empresas/suape.png",
+      "foto": "assets/logo-empresas/suape.png",
+      "site": "https://www.suape.pe.gov.br/pt/"
+    },
+
+    {
+      "nome": "Armazen centro logístico",
+      "segmento": "Armazen",
+      "descricao": "Empresa parceira da RMF Soluções Prediais.",
+      "logo": "assets/logo-empresas/armazen.png",
+      "foto": "assets/logo-empresas/armazen.png",
+      "site": "https://armazenna.com.br/"
+    },
+
+    {
+      "nome": "Unimed",
+      "segmento": "Hospital",
+      "descricao": "Empresa parceira da RMF Soluções Prediais.",
+      "logo": "assets/logo-empresas/unimed.png",
+      "foto": "assets/logo-empresas/unimed.png",
+      "site": "https://www.unimedrecife.com.br"
+    }
+
+  ]
+}

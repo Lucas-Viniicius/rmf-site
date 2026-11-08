@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080e18">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RMF Soluções Prediais">
   <meta name="description" content="RMF Soluções Prediais — Especialistas em obras, reformas, infraestrutura e manutenção predial industrial e corporativa.">
   <title>RMF Soluções Prediais | Construindo soluções, entregando resultados</title>
   
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <!-- CORRIGIDO: Nome do CSS alinhado para style.css -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/upgrade.css">
+  <link rel="stylesheet" href="css/rmf-premium.css">
 </head>
 <body>
 
   <div class="scroll-progress-bar" id="scrollProgress"></div>
 
   <!-- CABEÇALHO DA PÁGINA -->
+  <div class="rmf-intro" id="introScreen" role="region" aria-label="Apresentação RMF Soluções Prediais">
+  <canvas id="introCanvas" aria-hidden="true"></canvas>
+  <div class="rmf-intro-vignette" aria-hidden="true"></div>
+  <div class="rmf-intro-top"><span class="rmf-intro-eyebrow"><i></i> SISTEMA DE ENGENHARIA / RMF</span><button class="rmf-intro-skip" id="introSkip" type="button">Pular introdução <span aria-hidden="true">↗</span></button></div>
+  <div class="rmf-intro-content"><div class="rmf-intro-mark" aria-hidden="true">R<span>M</span>F</div><div class="rmf-intro-kicker">ENGENHARIA • INFRAESTRUTURA • INOVAÇÃO</div><h2>Construindo soluções.<br><em>Entregando resultados.</em></h2><p>Excelência técnica para empresas, indústrias, galpões logísticos e centros comerciais.</p><div class="rmf-intro-actions"><button id="introEnter" class="rmf-intro-enter" type="button">EXPLORAR SOLUÇÕES <span aria-hidden="true">↗</span></button><a href="contato.html" class="rmf-intro-outline">SOLICITAR ORÇAMENTO</a></div><div class="rmf-intro-values"><span>01 / PLANEJAMENTO</span><span>02 / EXECUÇÃO</span><span>03 / SEGURANÇA</span></div></div>
+  <div class="rmf-intro-bottom"><span>PRECISÃO EM CADA DETALHE</span><div class="rmf-intro-progress"><span id="introProgress"></span></div><span id="introPercent">INICIANDO</span></div>
+</div>
   <header class="header" id="header">
     <div class="container">
       <a href="index.html" class="logo-container" aria-label="RMF Soluções Prediais Página Inicial">
@@ -43,6 +55,7 @@
           <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
           <li><a href="servicos.html" class="nav-link">Serviços</a></li>
           <li><a href="portfolio.html" class="nav-link">Portfólio</a></li>
+          <li><a href="parceiros.html" class="nav-link">Empresas Parceiras</a></li>
           <li><a href="contato.html" class="nav-link">Contato</a></li>
         </ul>
       </nav>
@@ -53,7 +66,7 @@
         </a>
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Abrir Menu">
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -68,10 +81,10 @@
       <div class="hero-content reveal">
         <span class="section-tag">RMF Soluções Prediais</span>
         <h1 class="hero-title">
-          Construindo soluções, <br><span class="highlight-text">entregando resultados.</span>
+          Infraestrutura predial com <span class="highlight-text">excelência, segurança e alta performance.</span>
         </h1>
         <p class="section-subtitle">
-          Engenharia predial, obras, reformas e infraestrutura industrial. Soluções completas com alta qualidade, segurança e cumprimento rigoroso de prazos.
+          Engenharia, obras, reformas e manutenção para empresas, indústrias, galpões logísticos e centros comerciais. Tecnologia, precisão e soluções que impulsionam negócios.
         </p>
         
         <div class="hero-buttons">
@@ -103,11 +116,13 @@
       <!-- CANVAS 3D INTERATIVO -->
       <div class="hero-interactive-3d reveal">
         <div class="canvas-3d-wrapper">
+          <div class="tech-orbit orbit-one" aria-hidden="true"></div><div class="tech-orbit orbit-two" aria-hidden="true"></div>
+          <div class="tech-caption" aria-hidden="true"><span class="tech-caption-kicker">ENGENHARIA • INOVAÇÃO</span><strong>RMF</strong><small>SOLUÇÕES PREDIAIS</small></div>
           <canvas id="rmfLogo3DCanvas"></canvas>
           
           <div class="canvas-instruction">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-            <span>Clique e arraste a engrenagem RMF em 3D</span>
+            <span>Arraste para interagir com a engrenagem 3D</span>
           </div>
 
           <!-- CORRIGIDO: Sintaxe do style inline no elemento geométrico (top: -15px; right: -15px;) -->
@@ -179,6 +194,7 @@
     </div>
   </section>
 
+<section class="rmf-partners-preview rmf-surface"><div class="container"><div class="rmf-section-head reveal"><span class="section-tag">Conexões que geram resultados</span><h2 class="section-title">Empresas que <span>confiam na RMF</span></h2><p>Parcerias construídas com compromisso, qualidade e excelência técnica.</p></div><div class="rmf-preview-grid" id="partnersPreview" aria-live="polite"></div><div class="rmf-preview-action"><a class="btn btn-primary" href="parceiros.html">Conhecer nossos parceiros ↗</a></div></div></section>
   <!-- CTA FINAL -->
   <section class="index-cta-section">
     <div class="container reveal">
@@ -251,7 +267,7 @@
         <p>Slogan: <em>Construindo soluções, entregando resultados.</em></p>
       </div>
     </div>
-  </footer>
+  <div style="text-align:center;padding:8px 16px;background:#080e17"><a href="privacidade.html" style="color:#b7c3cf;font-size:12px">Privacidade e proteção de dados</a></div></footer>
 
   <!-- BOTÕES FLUTUANTES -->
   <div class="floating-actions">
@@ -266,5 +282,10 @@
   <!-- CORRIGIDO: Carregamento dos Scripts conectados -->
   <script src="js/main.js"></script>
   <script src="js/hero-3d.js"></script>
+  <script src="js/upgrade.js" defer></script>
+  <script src="js/intro-experience.js" defer></script>
+  <script type="module" src="js/rmf-three.js"></script>
+  <script src="js/partners.js" defer></script>
+<script src="js/scrollytelling.js" defer></script>
 </body>
 </html>
